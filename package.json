@@ -3,16 +3,14 @@
   "version": "0.0.1",
   "description": "ez template language",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
-  "main": "lib/transform.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/scott113341/eztl.git",
   "homepage": "https://github.com/scott113341/eztl",
   "bugs": "https://github.com/scott113341/eztl/issues",
-  "preferGlobal": true,
   "files": [
     "lib/"
   ],
-  "bin": "lib/cli.js",
   "scripts": {
     "prebuild": "rm -rf lib/ && mkdir -p lib/",
     "build": "pegjs src/parser.pegjs && babel -d lib/ src/",
