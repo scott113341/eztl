@@ -1,6 +1,6 @@
 {
   "name": "eztl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ez template language",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
   "main": "lib/transform.js",
