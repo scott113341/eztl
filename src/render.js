@@ -1,5 +1,4 @@
 import { STRING, STRING_VARIABLE, IF_CONTROL, ELSE_CONTROL, END_CONTROL } from './constants';
-import parse from './parse';
 
 
 export default function render(parts, variables={}) {
@@ -15,13 +14,14 @@ export default function render(parts, variables={}) {
     }
 
     else if (type === STRING_VARIABLE) {
-      if (varValue === undefined) throwStringUndefined(name);
+      if (varValue === undefined) throwStringReferenceError(name);
+      if (typeof varValue !== 'string') throwStringTypeError(name);
       results.push(varValue);
     }
 
     else if (type === IF_CONTROL) {
-      if (varValue === undefined) throwBooleanUndefined(name);
-      if (varValue !== true && varValue !== false) throwBooleanWrongType(name);
+      if (varValue === undefined) throwBooleanReferenceError(name);
+      if (varValue !== true && varValue !== false) throwBooleanTypeError(name);
 
       var ifIndex = i;
       var elseIndex = findElseIndex(parts, ifIndex);
@@ -73,16 +73,21 @@ function findEndIndex(parts, ifIndex) {
 }
 
 
-
-
-function throwStringUndefined(name) {
-  throw new Error(`String variable "${name}" is undefined.`);
+function throwStringReferenceError(name) {
+  throw new ReferenceError(`String variable "${name}" is undefined.`);
 }
 
-function throwBooleanUndefined(name) {
-  throw new Error(`Boolean variable "${name}" is undefined.`);
+
+function throwBooleanReferenceError(name) {
+  throw new ReferenceError(`Boolean variable "${name}" is undefined.`);
 }
 
-function throwBooleanWrongType(name) {
-  throw new Error(`Boolean variable "${name}" is not a Boolean.`);
+
+function throwStringTypeError(name) {
+  throw new TypeError(`String variable "${name}" is not a String.`);
+}
+
+
+function throwBooleanTypeError(name) {
+  throw new TypeError(`Boolean variable "${name}" is not a Boolean.`);
 }
