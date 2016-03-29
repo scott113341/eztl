@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "ez template language",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
-  "main": "lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/scott113341/eztl.git",
   "homepage": "https://github.com/scott113341/eztl",
   "bugs": "https://github.com/scott113341/eztl/issues",
+  "main": "lib/index.js",
   "files": [
     "lib/"
   ],
