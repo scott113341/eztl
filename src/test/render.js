@@ -1,7 +1,7 @@
 import test from 'tape';
 
-import parse from '../parse';
-import render from '../render';
+import parse from '../parse.js';
+import render from '../render.js';
 
 
 test('render empty string', t => {

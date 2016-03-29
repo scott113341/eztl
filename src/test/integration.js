@@ -1,6 +1,6 @@
 import test from 'tape';
 
-import eztl from '../index';
+import eztl from '../index.js';
 
 
 test('eztl empty string', t => {

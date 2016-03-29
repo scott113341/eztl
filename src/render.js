@@ -1,4 +1,4 @@
-import { STRING, STRING_VARIABLE, IF_CONTROL, ELSE_CONTROL, END_CONTROL } from './constants';
+import { STRING, STRING_VARIABLE, IF_CONTROL, ELSE_CONTROL, END_CONTROL } from './constants.js';
 
 
 export default function render(parts, variables={}) {
