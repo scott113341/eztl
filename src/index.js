@@ -1,5 +1,5 @@
-import parse from './parse';
-import render from './render';
+import parse from './parse.js';
+import render from './render.js';
 
 
 export default function eztl(input, variables={}) {
