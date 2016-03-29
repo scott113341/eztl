@@ -1,6 +1,6 @@
 import test from 'tape';
 
-import eztl from '../lib/index';
+import eztl from '../index';
 
 
 test('eztl empty string', t => {

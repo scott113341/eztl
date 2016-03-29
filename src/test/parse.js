@@ -1,6 +1,6 @@
 import test from 'tape';
 
-import parse from '../lib/parse';
+import parse from '../parse';
 
 
 test('parse empty string', t => {
